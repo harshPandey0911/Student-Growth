@@ -1,0 +1,41 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('college image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }

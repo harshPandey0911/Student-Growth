@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(college_back.jpg);
+  animation: gradientAnimation 10s ease infinite;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  text-align: center;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideUp 0.5s ease-out 1s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+  color:black;
+  letter-spacing: 2px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.button-grid button {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 8px;
+  width: 100%; /* Full width of grid column */
+  max-width: 140px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #73ba7a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 5px 6px #203423;
+}
+
+
+.button-grid button:hover {
+  background-color: #47744b;
+  transform: scale(1.05);
+}
+
+.button-grid button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.button-grid button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}

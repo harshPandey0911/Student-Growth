@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hostel Website</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- Modern Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        
+        
+      </div>
+      <nav class="nav-links">
+      
+        <a href="Rooom rental app/home.html">Hostel</a>
+        <a href="#contact">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="college.html">Courses</a>
+      </nav>
+      <!-- Dark Mode Toggle -->
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </header>
+
+  <!-- Slider Section -->
+  <div class="section2">
+    <div class="slider">
+      <div class="s2text">
+        “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
+      </div>
+    </div>
+  </div>
+
+   <section class="search-section">
+    <div class="search-box">
+      <input type="text"/>
+      <button onclick="college()">Search</button>
+    </div>
+  </section>
+
+  <!-- Search Section (after Slider) -->
+ 
+
+  <li>
+    <a href="college.html"></a>
+    
+  </li>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Welcome to My Hostel, your home away from home. We provide safe, comfortable, and affordable accommodations for students.</p>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: harshpandey09112004@gmail.com | Phone: 7879363299</p>
+  </section>
+
+  <script>
+    // Check for dark mode preference in localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark');
+    }
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+        // Save dark mode preference to localStorage
+        if (document.body.classList.contains('dark')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    }
+
+    function college(){
+      window.open("college.html")
+    }
+    
+
+    
+    function about(){
+      window.open("about.html")
+    }
+    
+
+  </script>
+</body>
+</html>

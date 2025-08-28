@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.college-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.college-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.college-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.college-header {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.rating {
+  color: #f39c12;
+  margin-bottom: 8px;
+}
+
+.info {
+  margin-bottom: 6px;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+button.secondary {
+  background-color: #95a5a6;
+}
+
+button.secondary:hover {
+  background-color: #7f8c8d;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Optional: animate cards in sequence */
+.college-card:nth-child(1) { animation-delay: 0s; }
+.college-card:nth-child(2) { animation-delay: 0.1s; }
+.college-card:nth-child(3) { animation-delay: 0.2s; }
+.college-card:nth-child(4) { animation-delay: 0.3s; }
+.college-card:nth-child(5) { animation-delay: 0.4s; }
+.college-card:nth-child(6) { animation-delay: 0.5s; }
+.college-card:nth-child(7) { animation-delay: 0.6s; }
+.college-card:nth-child(8) { animation-delay: 0.7s; }
+.college-card:nth-child(9) { animation-delay: 0.8s; }
+.college-card:nth-child(10) { animation-delay: 0.9s; }
